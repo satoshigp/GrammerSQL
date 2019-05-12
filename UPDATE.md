@@ -23,9 +23,9 @@ UPDATE ex1 SET age = 20 WHERE age＜10;
 ## 削除した列はROOLBACKで元に戻すことが不可能
 ```sql
 //条件なし
-DELE FROM 表名 列名;
+DELETE FROM 表名 列名;
 /*条件あり*/
-DELETE 表名 列名 HERE 条件;
+DELETE FROM 表名 WHERE 条件;
 
 例）
 /*条件なし*/
@@ -38,8 +38,10 @@ DELETE FROM ex1 age WHERE name IS NULL;
 ## 全行の削除を行う。
 ## ＳＱＬはつりーじょうで管理されており、データを根元から切るのでROLLBACKは不可能
 ```sql
+TRUNCATE TABLE 表名
+//例）
+TRUNCATE TABLE ex1;
 ```
-
 ---
 - ## 表の削除
 ## 表の削除を行う。UPDATEを使用する。
